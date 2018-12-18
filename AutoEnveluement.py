@@ -7,6 +7,7 @@ right = ["非常同意", "一定会", "对我帮助大", "4次以上", "4小时�
          ">12小时 "]
 a = open("user.txt")
 data = a.readlines()
+
 a.close()
 driver_option = webdriver.ChromeOptions()
 # driver_option.add_argument("--headless")
