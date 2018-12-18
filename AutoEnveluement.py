@@ -3,7 +3,7 @@ import json
 from selenium import webdriver
 
 right = ["非常同意", "一定会", "对我帮助大", "4次以上", "4小时以上", "每次", ">12小时", "非常同意 ", "一定会 ", "对我帮助大 ", "4次以上 ", "4小时以上 ", "每次 ",
-         "5次及以上","5次及以上 ",
+         "5次及以上", "5次及以上 ",
          ">12小时 "]
 a = open("user.txt")
 data = a.readlines()
@@ -23,13 +23,14 @@ time.sleep(5)
 mainPage = driver.current_window_handle
 print(mainPage)
 for page in range(1, 11):
+    time.sleep(5)
 
     p = driver.find_element_by_xpath(f'//*[@id="myTaskContainer"]/table/tbody[2]/tr[{page}]/td[7]/a')
 
     driver.execute_script("arguments[0].scrollIntoView();", p)
     # 挪到第n项
     p.click()
-    time.sleep(3)
+    time.sleep(5)
     driver.switch_to.window(driver.window_handles[1])
     driver.maximize_window()
     # 最大化
@@ -60,7 +61,6 @@ for page in range(1, 11):
                         break
             except:
                 continue
-
 
     driver.find_element_by_xpath('//*[@id="btnSave"]').click()
     time.sleep(2)
