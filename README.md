@@ -4,3 +4,4 @@
 * 完事有问题戳我，
 * 最后第二十五行，range(1,11)的11改成你要评估的课程的数量
 * 打开文件就txt文件形式打开，或者notepad++打开
+* chromedriver要自己下载对应的版本(windows,linux,mac)
